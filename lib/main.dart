@@ -13,6 +13,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Startup Name Generator',
       home: RandomWords(),
+      theme: ThemeData(
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.white,
+          foregroundColor: Colors.black,
+        ),
+      ),
     );
   }
 }
@@ -43,7 +49,7 @@ class _RandomWordsState extends State<RandomWords> {
             );
            }, 
           );
-          
+
           final divided = tiles.isNotEmpty
           ? ListTile.divideTiles(
             tiles: tiles,
